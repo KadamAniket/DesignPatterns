@@ -8,16 +8,15 @@ namespace Iterator
         {
             // Build a collection
             EmployeeConcreteCollection collection = new EmployeeConcreteCollection();
-            collection.AddItem(new Employee("Anurag", 100));
-            collection.AddItem(new Employee("Pranaya", 101));
-            collection.AddItem(new Employee("Santosh", 102));
-            collection.AddItem(new Employee("Priyanka", 103));
-            collection.AddItem(new Employee("Abinash", 104));
-            collection.AddItem(new Employee("Preety", 105));
+            collection.AddItem(new Employee("Aniket", 100));
+            collection.AddItem(new Employee("Rajiv", 101));
+            collection.AddItem(new Employee("Pradeep", 102));
+
 
             // Create iterator
             IAbstractIterator<Employee> iterator = collection.CreateIterator();
-            //looping iterator      
+
+
             Console.WriteLine("Iterating over collection:");
 
             for (Employee emp = iterator.First(); !iterator.IsCompleted; emp = iterator.Next())

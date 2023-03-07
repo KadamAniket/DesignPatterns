@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace Adapter
 {
@@ -7,8 +6,10 @@ namespace Adapter
     {
         static void Main(string[] args)
         {
-            ClientWithCompanyA();
             ClientWithCompanyB();
+
+
+            Console.ReadLine();
         }
 
         private static void ClientWithCompanyA()
@@ -18,7 +19,7 @@ namespace Adapter
             CompanyA a = new CompanyA();
             Client abc = new Client(a);
 
-            Console.WriteLine(abc.CalculateSalaryBonus(emp));
+            Console.WriteLine("Employee Bonus Salary:{0}", abc.CalculateSalaryBonus(emp));
         }
 
         private static void ClientWithCompanyB()
@@ -29,7 +30,7 @@ namespace Adapter
             Adapter adapter = new Adapter(b);
             Client abc = new Client(adapter);
 
-            Console.WriteLine(abc.CalculateSalaryBonus(emp));
+            Console.WriteLine("Employee Bonus Salary:{0}", abc.CalculateSalaryBonus(emp));
         }
     }
 }

@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Decorator
+﻿namespace Decorator
 {
     class LoyalEmployeesSalary : EmployeeSalaryDecorator
     {
 
-        public LoyalEmployeesSalary(Employee emp):base(emp)
+        public LoyalEmployeesSalary(Employee emp) : base(emp)
         {
 
         }

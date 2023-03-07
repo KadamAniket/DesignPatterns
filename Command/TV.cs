@@ -36,13 +36,13 @@ namespace Command
 
         public void Execute()
         {
-            this._tv.TurnOnDisplay();
-            this._tv.ReadHDMIPorts();
-            this._tv.DisplayDefaultChannel();
+            _tv.TurnOnDisplay();
+            _tv.ReadHDMIPorts();
+            _tv.DisplayDefaultChannel();
         }
     }
 
-    public class TvOffCommand: ICommand
+    public class TvOffCommand : ICommand
     {
         private readonly TV _tv;
 

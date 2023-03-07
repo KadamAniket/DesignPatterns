@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Adapter
+﻿namespace Adapter
 {
     class CompanyA : ISalaryBonus
     {
-        public int CalculateSalaryBonus(Employee employees)
+
+        public int CalculateSalaryBonus(Employee employee)
         {
             // DO some logic
 
-            return employees.Salary + 2000;
+            return employee.Salary + 2000;
         }
     }
 }

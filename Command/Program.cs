@@ -1,4 +1,6 @@
-﻿namespace Command
+﻿using System;
+
+namespace Command
 {
     class Program
     {
@@ -11,6 +13,9 @@
             remote1.Invoke();
             remote1.setCommand(new TvOffCommand(sonyTv));
             remote1.Invoke();
+
+
+            Console.ReadLine();
         }
     }
 }

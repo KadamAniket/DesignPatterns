@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Threading;
 using System.Threading.Tasks;
 
 namespace Singleton
@@ -10,30 +9,25 @@ namespace Singleton
         {
 
             // Simple case
+
             //var instance1 = Singleton.Instance;
             //var instance2 = Singleton.Instance;
             //Console.WriteLine(instance1.Id);
             //Console.WriteLine(instance2.Id);
 
 
-            // MultiThreading case
-            //Thread t1 = new Thread(new ThreadStart(() => { Console.WriteLine(Singleton.Instance.Id); }));
-            //Thread t2 = new Thread(new ThreadStart(() => { Console.WriteLine(Singleton.Instance.Id); }));
-
-            //t1.Start();
-            //t2.Start();
-
-            //t1.Join();
-            //t2.Join();
-
-            // OR
-
             //Parallel.Invoke(
-            //    () => CreateInstance(),
+            //() => CreateInstance(),
             //    () => CreateInstance()
             //    );
 
-            callThreadSafeSingleton();
+
+            Parallel.Invoke(
+            () => createThreadSafeSingletonInstance(),
+                () => createThreadSafeSingletonInstance()
+             );
+
+
 
 
             Console.ReadLine();
